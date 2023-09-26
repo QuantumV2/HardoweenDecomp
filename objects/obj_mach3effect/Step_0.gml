@@ -1,0 +1,2 @@
+if (obj_player.state != (89 << 0) && obj_player.state != (16 << 0) && obj_player.state != (8 << 0) && obj_player.state != (94 << 0) && obj_player.state != (69 << 0) && obj_player.state != (21 << 0) && obj_player.state != (70 << 0) && obj_player.state != (41 << 0) && obj_player.state != (34 << 0) && obj_player.state != (39 << 0) && obj_player.state != (42 << 0) && obj_player.state != (36 << 0) && obj_player.state != (32 << 0) && obj_player.state != (62 << 0))
+    instance_destroy()

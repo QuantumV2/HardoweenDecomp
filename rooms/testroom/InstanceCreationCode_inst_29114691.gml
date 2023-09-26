@@ -1,0 +1,1 @@
+targetRoom = halloween_entrance
