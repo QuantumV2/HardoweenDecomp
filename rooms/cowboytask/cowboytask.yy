@@ -90,7 +90,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Hub (SAGE)",
+    "path": "folders/Rooms/Hub (SAGE).yy",
   },
 }

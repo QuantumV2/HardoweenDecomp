@@ -319,7 +319,7 @@ if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && steppy 
 }
 if (move != 0 && floor(image_index) != 3 && floor(image_index) != 8)
     steppy = 0
-if ((key_taunt2 && character == "P") || (key_taunt2 && global.qolfeatures))
+if (key_taunt2 && character == "P")
 {
     scr_soundeffect(sfx_taunt)
     taunttimer = 20

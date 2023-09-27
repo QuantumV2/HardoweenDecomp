@@ -178,7 +178,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "GOLF",
+    "path": "folders/Rooms/GOLF.yy",
   },
 }

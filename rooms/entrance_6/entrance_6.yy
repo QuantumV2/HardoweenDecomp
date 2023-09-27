@@ -140,7 +140,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "John Gutter",
+    "path": "folders/Rooms/John Gutter.yy",
   },
 }

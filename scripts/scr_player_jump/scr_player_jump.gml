@@ -214,7 +214,7 @@ if (key_attack && grounded && fallinganimation < 40)
     state = (68 << 0)
     image_index = 0
 }
-if ((key_taunt2 && character == "P") || (key_taunt2 && global.qolfeatures))
+if (key_taunt2 && character == "P")
 {
     scr_soundeffect(sfx_taunt)
     taunttimer = 20

@@ -109,7 +109,7 @@ if (key_attack && (!(place_meeting((x + xscale), y, obj_solid))) && character ==
     state = (21 << 0)
     movespeed = 0
 }
-if ((key_taunt2 && character == "P") || (key_taunt2 && global.qolfeatures))
+if (key_taunt2 && character == "P")
 {
     scr_soundeffect(sfx_taunt)
     taunttimer = 20

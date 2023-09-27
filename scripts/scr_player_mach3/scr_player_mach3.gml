@@ -148,7 +148,7 @@ if (!instance_exists(obj_chargeeffect))
     instance_create(x, y, obj_chargeeffect)
 if ((!instance_exists(obj_superdashcloud)) && grounded)
     instance_create(x, y, obj_superdashcloud)
-if ((key_taunt2 && character == "P") || (key_taunt2 && global.qolfeatures))
+if (key_taunt2 && character == "P")
 {
     scr_soundeffect(sfx_taunt)
     taunttimer = 20

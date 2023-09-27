@@ -85,7 +85,10 @@ if (character == "P")
     spr_superjumpland = spr_player_superjumpland
     spr_walljumpstart = spr_player_walljumpstart
     spr_superjumpprep = spr_player_superjumpprep
+	spr_superjumppreplight = spr_player_superjumppreplight
     spr_superjump = spr_player_superjump
+	spr_superjumpright = spr_player_superjumpright
+	spr_superjumpleft = spr_player_superjumpleft
     spr_machfreefall = spr_player_machfreefall
     spr_mach3hit = spr_player_mach3hit
     spr_knightpepwalk = spr_knightpep_walk
