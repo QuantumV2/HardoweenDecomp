@@ -4,7 +4,7 @@ if instance_exists(ID)
 {
     x = ID.x
     y = ID.y
-    image_xscale = ID.image_xscale / 1.5 //idk why but otherwise its too big
+    image_xscale = ID.image_xscale / 2 //idk why but otherwise its too big
     image_index = ID.image_index
     with (ID)
     {
