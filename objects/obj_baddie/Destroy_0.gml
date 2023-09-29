@@ -19,8 +19,8 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && important == 0)
     with (instance_create(x, y, obj_sausageman_dead))
     {
         sprite_index = other.spr_dead
-        spr_palette = other.spr_palette
-        paletteselect = other.paletteselect
+        spr_palette = variable_instance_get(other.id, "spr_palette") != undefined ? other.spr_palette : spr_null
+        paletteselect = variable_instance_get(other.id, "paletteselect") != undefined ? other.paletteselect : 0
     }
     ds_list_add(global.baddieroom, id)
     obj_tv.image_index = random_range(0, 4)
