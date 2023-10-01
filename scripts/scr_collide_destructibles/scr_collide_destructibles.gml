@@ -46,14 +46,14 @@ if (vsp >= 0 && (state == (73 << 0) || state == (76 << 0)))
         {
             if place_meeting(x, ((y + other.vsp) + 2), obj_bigdestructibles)
             {
-				with(other){ with(other){
-	                if (shotgunAnim == 0)
-	                    sprite_index = spr_bodyslamland
-	                else
-	                    sprite_index = spr_shotgunjump2
-	                state = (76 << 0)
-	                image_index = 0
-				}}
+		with(other){
+			if (shotgunAnim == 0)
+			    sprite_index = spr_bodyslamland
+			else
+			    sprite_index = spr_shotgunjump2
+			state = (76 << 0)
+			image_index = 0
+		}
             }
             instance_destroy()
         }
