@@ -5,6 +5,6 @@ Made with **my own** (With the support of CST1229) decompiler
 
 I hope you have fun using this! Please credit QuantumV if used.
 
-# THIS PROJECT IS DEAD UNTIL GAMEMAKER FIXES THE ISSUE OF NOT BEING ABLE TO LOAD IT
+# THIS PROJECT IS DEAD UNTIL GAMEMAKER FIXES THE ISSUE OF NOT BEING ABLE TO LOAD IT, FOR A WORKING DECOMP, PLEASE CHECK OUT https://github.com/QuantumV2/BeachAndForestDecomp
 
 ![image](https://github.com/QuantumV2/HardoweenDecomp/assets/83087109/f58edf41-9119-4dc5-8894-17996890824d)
