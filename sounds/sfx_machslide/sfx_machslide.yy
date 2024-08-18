@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":3,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":1.605918,
   "name":"sfx_machslide",
   "parent":{
     "name":"Sounds",
