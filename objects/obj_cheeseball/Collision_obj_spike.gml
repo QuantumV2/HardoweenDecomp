@@ -15,7 +15,7 @@ if (obj_player.state == (10 << 0))
         instance_create(x, y, obj_slimedebris)
         instance_destroy(other.id)
         if (x != other.x)
-            obj_player.hsp = (sign((x - other.x)) * 5)
+            obj_player.hsp = (sign(x - other.x)) * 5
         else
             obj_player.hsp = 5
         vsp = -3

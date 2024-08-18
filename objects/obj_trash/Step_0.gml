@@ -43,14 +43,14 @@ if (state != (95 << 0) && bombreset == 0)
 {
     if (state == (100 << 0) || state == (92 << 0))
     {
-        if (!audio_is_playing(sfx_punch))
-            scr_sound(sfx_punch)
+        if (!audio_is_playing(sound_enemythrow))
+            scr_sound(sound_enemythrow)
         image_index = 0
         state = (95 << 0)
     }
 }
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (state != (107 << 0))
     depth = 0
 if (state != (104 << 0))

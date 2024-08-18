@@ -1,1 +1,1 @@
-bg = 1192
+bg = bg_castle3

@@ -8,4 +8,4 @@ with (obj_camera2)
 if (global.panic == 1 && global.panicbg)
     scr_panicbg_init()
 application_surface_draw_enable(true)
-global.wave = (global.maxwave - (((global.minutes * 60) + global.seconds) * 60))
+global.wave = global.maxwave - (global.minutes * 60 + global.seconds) * 60

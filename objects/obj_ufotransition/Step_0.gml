@@ -8,6 +8,6 @@ else
     touch = 1
 }
 if (touch == 1)
-    obj_player.y = (y + 30)
+    obj_player.y = y + 30
 if place_meeting(x, y, obj_player)
     touch = 1

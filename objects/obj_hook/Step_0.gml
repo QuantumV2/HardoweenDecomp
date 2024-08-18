@@ -1,16 +1,15 @@
 scr_getinput()
-x += hsp
 if (hooked == 1 && drop == 0)
 {
     obj_player.x = x
-    obj_player.y = (y + 40)
+    obj_player.y = y + 40
     if key_jump
     {
         with (obj_player)
         {
-            jumpAnim = 0
+            jumpAnim = false
             state = (57 << 0)
-            machslideAnim = 1
+            machslideAnim = true
             image_index = 0
             vsp = 1
         }
@@ -21,7 +20,7 @@ if (hooked == 1 && drop == 0)
 if (place_meeting(x, (y - 31), obj_hookend) && hooked == 1)
 {
     drop = 1
-    obj_player.state = (57 << 0)
+    obj_player.state = (69 << 0)
     hooked = 0
     vsp = random_range(-4, 0)
     hsp = random_range(-4, 4)

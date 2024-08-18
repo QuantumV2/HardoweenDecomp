@@ -1,2 +1,2 @@
 x = other.x
-y = (other.y + 120)
+y = other.y + 120

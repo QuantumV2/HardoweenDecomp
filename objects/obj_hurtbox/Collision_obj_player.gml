@@ -47,10 +47,13 @@ with (other.id)
         }
         else
         {
-            if (obj_player1.character == "P")
-                sprite_index = spr_shotgunback
-            else if (obj_player1.character == "N")
-                sprite_index = spr_minigunfall
+            with (instance_create(x, y, obj_sausageman_dead))
+            {
+                if (obj_player1.character == "P")
+                    sprite_index = spr_shotgunback
+                else if (obj_player1.character == "N")
+                    sprite_index = spr_minigunfall
+            }
             if (backupweapon == 1)
                 backupweapon = 0
             else

@@ -1,9 +1,9 @@
 if (floor(image_index) == 2 && canthrowbomb == 1)
 {
-    scr_sound(sfx_punch)
-    with (instance_create((x + (image_xscale * 10)), (y - 20), obj_bomb))
+    scr_sound(sound_enemythrow)
+    with (instance_create((x + image_xscale * 10), (y - 20), obj_bomb))
     {
-        hsp = (other.image_xscale * 4)
+        hsp = other.image_xscale * 4
         drop = 1
         vsp = -5
     }

@@ -17,8 +17,8 @@ if (global.shroomfollow == 1 && sprite_index != spr_toppinshroom_intro)
     LAG_STEPS = 10
     if (ds_queue_size(followQueue) > (LAG_STEPS * 2))
     {
-        x = (ds_queue_dequeue(followQueue) - (image_xscale * 4))
-        y = (ds_queue_dequeue(followQueue) + 2)
+        x = ds_queue_dequeue(followQueue) - image_xscale * 4
+        y = ds_queue_dequeue(followQueue) + 2
     }
     image_xscale = obj_player.xscale
 }

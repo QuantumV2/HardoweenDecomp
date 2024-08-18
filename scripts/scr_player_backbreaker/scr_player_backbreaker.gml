@@ -1,69 +1,68 @@
-function scr_player_backbreaker () {
-mach2 = 0
-if (sprite_index != spr_player_machfreefall)
-{
-    hsp = 0
-    movespeed = 0
-}
-else
-    hsp = (xscale * movespeed)
-landAnim = 0
-if (sprite_index == spr_player_machfreefall && place_meeting(x, (y + 1), obj_solid))
-{
-    state = (70 << 0)
-    sprite_index = spr_player_crouchslide
-}
-if (character == "P")
-{
-    if (sprite_index == spr_taunt)
+function scr_player_backbreaker() {
+    mach2 = 0
+    if (sprite_index != spr_player_machfreefall)
     {
-        if (global.combo >= 3 && (!instance_exists(obj_tauntaftereffectspawner)))
+        hsp = 0
+        movespeed = 0
+    }
+    else
+        hsp = xscale * movespeed
+    landAnim = false
+    if (sprite_index == spr_player_machfreefall && place_meeting(x, (y + 1), obj_solid))
+    {
+        state = (70 << 0)
+        sprite_index = spr_player_crouchslide
+    }
+    if (character == "P")
+    {
+        if (sprite_index == spr_taunt)
         {
-            instance_create(x, y, obj_tauntaftereffectspawner)
-            with (obj_baddie)
+            if (global.combo >= 3 && (!instance_exists(obj_tauntaftereffectspawner)))
             {
-                if point_in_rectangle(x, y, __view_get((0 << 0), 0), __view_get((1 << 0), 0), (__view_get((0 << 0), 0) + __view_get((2 << 0), 0)), (__view_get((1 << 0), 0) + __view_get((3 << 0), 0)))
-                    instance_destroy()
+                instance_create(x, y, obj_tauntaftereffectspawner)
+                with (obj_baddie)
+                {
+                    if point_in_rectangle(x, y, __view_get((0 << 0), 0), __view_get((1 << 0), 0), ((__view_get((0 << 0), 0)) + (__view_get((2 << 0), 0))), ((__view_get((1 << 0), 0)) + (__view_get((3 << 0), 0))))
+                        instance_destroy()
+                }
+                with (obj_camera)
+                {
+                    shake_mag = 10
+                    shake_mag_acc = 30 / room_speed
+                }
             }
-            with (obj_camera)
-            {
-                shake_mag = 10
-                shake_mag_acc = (30 / room_speed)
-            }
+            taunttimer--
+            vsp = 0
         }
-        taunttimer--
-        vsp = 0
+        if (taunttimer == 0 && sprite_index == spr_taunt)
+        {
+            movespeed = tauntstoredmovespeed
+            sprite_index = tauntstoredsprite
+            state = tauntstoredstate
+        }
     }
-    if (taunttimer == 0 && sprite_index == spr_taunt)
+    if (character == "N" && sprite_index == spr_taunt)
     {
-        movespeed = tauntstoredmovespeed
-        sprite_index = tauntstoredsprite
-        state = tauntstoredstate
+        image_index = (gamepad_button_value(0, gp_shoulderlb)) * 20
+        if (gamepad_button_value(0, gp_shoulderlb) == 0)
+            state = (0 << 0)
     }
-}
-if (character == "N" && sprite_index == spr_taunt)
-{
-    image_index = (gamepad_button_value(0, gp_shoulderlb) * 20)
-    if (gamepad_button_value(0, gp_shoulderlb) == 0)
+    if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_eatspaghetti)
         state = (0 << 0)
-}
-if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_eatspaghetti)
-    state = (0 << 0)
-if (floor(image_index) == (image_number - 1) && sprite_index == spr_Timesup && place_meeting(x, y, obj_exitgate))
-    state = (0 << 0)
-if (floor(image_index) == (image_number - 1) && (sprite_index == spr_player_levelcomplete || sprite_index == spr_playerN_victory))
-    state = (0 << 0)
-if (key_jump && sprite_index == spr_player_phoneidle)
-{
-    global.panic = 1
-    sprite_index = spr_bossintro
-    image_index = 0
-    with (instance_create(x, y, obj_debris))
+    if (floor(image_index) == (image_number - 1) && sprite_index == spr_Timesup && place_meeting(x, y, obj_exitgate))
+        state = (0 << 0)
+    if (floor(image_index) == (image_number - 1) && (sprite_index == spr_player_levelcomplete || sprite_index == spr_playerN_victory))
+        state = (0 << 0)
+    if (key_jump && sprite_index == spr_player_phoneidle)
     {
+        global.panic = 1
+        sprite_index = spr_bossintro
         image_index = 0
-        sprite_index = spr_phonedebris
+        with (instance_create(x, y, obj_debris))
+        {
+            image_index = 0
+            sprite_index = spr_phonedebris
+        }
     }
-}
-image_speed = 0.35
-
+    image_speed = 0.35
 }

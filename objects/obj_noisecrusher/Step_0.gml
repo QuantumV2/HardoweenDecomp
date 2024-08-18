@@ -23,7 +23,7 @@ if (state == (104 << 0) && stunned > 40 && birdcreated == 0)
 if (state != (104 << 0))
     birdcreated = 0
 if (state == (92 << 0) && obj_player.x != x)
-    image_xscale = sign((obj_player.x - x))
+    image_xscale = sign(obj_player.x - x)
 if (state == (92 << 0))
     attack--
 if (attack <= 0 && state == (92 << 0))
@@ -77,11 +77,11 @@ if (caughtplayer == 1 && grounded)
     obj_player.hsp = 0
     obj_player.vsp = 0
     obj_player.x = x
-    obj_player.y = (y - 20)
+    obj_player.y = y - 20
     caughtplayer = 0
 }
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (state != (107 << 0))
     depth = 0
 scr_collide()

@@ -38,7 +38,7 @@ if (state == (104 << 0) && stunned > 100 && birdcreated == 0)
 if (state != (104 << 0))
     birdcreated = 0
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (state != (107 << 0))
     depth = 0
 if (state != (104 << 0))
@@ -50,7 +50,7 @@ if (obj_player.x > (x - 900) && obj_player.x < (x + 900) && y <= (obj_player.y +
         state = (92 << 0)
         sprite_index = scaredspr
         if (x != obj_player.x)
-            image_xscale = (-(sign((x - obj_player.x))))
+            image_xscale = (-(sign(x - obj_player.x)))
     }
 }
 if (bombreset > 0)
@@ -63,7 +63,7 @@ if (x != obj_player1.x && state != (95 << 0) && obj_player.state != (1 << 0) && 
         {
             image_index = 0
             sprite_index = spr_pepgoblin_kick
-            image_xscale = (-(sign((x - obj_player.x))))
+            image_xscale = (-(sign(x - obj_player.x)))
             state = (95 << 0)
         }
     }
@@ -78,7 +78,7 @@ if instance_exists(obj_player2)
             {
                 image_index = 0
                 sprite_index = spr_pepgoblin_kick
-                image_xscale = (-(sign((x - obj_player.x))))
+                image_xscale = (-(sign(x - obj_player.x)))
                 state = (95 << 0)
             }
         }

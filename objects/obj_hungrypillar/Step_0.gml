@@ -5,8 +5,11 @@ with (obj_player)
         instance_create(other.x, other.y, obj_bangeffect)
         instance_create(other.x, other.y, obj_slapstar)
         instance_create(other.x, other.y, obj_baddiegibs)
-        shake_mag = 3
-        shake_mag_acc = (3 / room_speed)
+        with (obj_camera)
+        {
+            shake_mag = 3
+            shake_mag_acc = 3 / room_speed
+        }
         scr_soundeffect(sfx_hitenemy)
         other.sprite_index = spr_hungrypillar_angry
         other.hp -= 1

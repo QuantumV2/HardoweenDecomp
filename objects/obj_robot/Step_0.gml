@@ -43,7 +43,7 @@ walkspr = spr_robot_walk
 stunspr = spr_robot_stun
 grabbedspr = spr_robot_stun
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (state != (107 << 0))
     depth = 0
 if (state != (104 << 0))
@@ -56,9 +56,9 @@ if (x != obj_player.x && state != (95 << 0) && bombreset == 0)
     {
         if (state == (100 << 0) || state == (92 << 0))
         {
-            scr_sound(sfx_punch)
+            scr_sound(sound_enemythrow)
             image_index = 0
-            image_xscale = (-(sign((x - obj_player.x))))
+            image_xscale = (-(sign(x - obj_player.x)))
             state = (95 << 0)
         }
     }

@@ -12,16 +12,16 @@ if (invframes == 0)
                 {
                     other.stunned = 200
                     other.vsp = -5
-                    other.hsp = ((-other.image_xscale) * 3)
+                    other.hsp = (-other.image_xscale) * 3
                     other.state = (104 << 0)
                     other.image_index = 0
                 }
                 else
                     instance_create(x, (y + 50), obj_bumpeffect)
-                scr_sound(sfx_stompenemy)
+                scr_sound(sound_stomp)
                 instance_create(x, (y + 50), obj_stompeffect)
                 image_index = 0
-                stompAnim = 1
+                stompAnim = true
                 sprite_index = spr_player_stompprep
                 if key_jump2
                     vsp = -14
@@ -55,8 +55,8 @@ if (invframes == 0)
             {
                 instance_create(x, y, obj_bumpeffect)
                 if (x != other.x)
-                    xscale = (-(sign((x - other.x))))
-                hsp = ((-xscale) * 10)
+                    xscale = (-(sign(x - other.x)))
+                hsp = (-xscale) * 10
                 vsp = -4
                 image_index = 0
                 state = (71 << 0)

@@ -5,8 +5,8 @@ with (obj_player)
         hsp = 0
     if (obj_hookshot.hooked == 1)
     {
-        xDist = (obj_player.x - obj_hookshot.x)
-        yDist = (obj_player.y - obj_hookshot.y)
+        xDist = obj_player.x - obj_hookshot.x
+        yDist = obj_player.y - obj_hookshot.y
         if (sign(xDist) == -1)
             hsp++
         else if (sign(xDist) == 1)

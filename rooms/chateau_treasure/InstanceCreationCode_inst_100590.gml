@@ -1,2 +1,2 @@
-spridle = 1066
-sprgot = 1068
+spridle = spr_treasure1H
+sprgot = spr_treasure1Hpick1

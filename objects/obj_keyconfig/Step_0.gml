@@ -1,19 +1,19 @@
 if (selecting == -1)
 {
-    if (obj_player.key_up2 && key_select > -1)
+    if (obj_player1.key_up2 && key_select > -1)
     {
         key_select -= 1
         scr_soundeffect(sfx_step)
     }
-    if (obj_player.key_down2 && key_select < 8)
+    if (obj_player1.key_down2 && key_select < 8)
     {
         key_select += 1
         scr_soundeffect(sfx_step)
     }
-    if (-obj_player.key_left2)
+    if (-obj_player1.key_left2)
         key_select = -1
 }
-if (obj_player.key_jump2 && selecting == -1 && key_select == -1)
+if (obj_player1.key_jump2 && selecting == -1 && key_select == -1)
 {
     scr_soundeffect(sfx_enemyprojectile)
     ini_open("saveData.ini")
@@ -39,7 +39,7 @@ if (selecting == 0)
         selecting = -1
     }
 }
-if (key_select == 0 && obj_player.key_jump && selecting == -1)
+if (key_select == 0 && obj_player1.key_jump && selecting == -1)
 {
     selecting = key_select
     global.key_up = -1
@@ -52,7 +52,7 @@ if (selecting == 1)
         selecting = -1
     }
 }
-if (key_select == 1 && obj_player.key_jump && selecting == -1)
+if (key_select == 1 && obj_player1.key_jump && selecting == -1)
 {
     selecting = key_select
     global.key_down = -1
@@ -65,7 +65,7 @@ if (selecting == 2)
         selecting = -1
     }
 }
-if (key_select == 2 && obj_player.key_jump && selecting == -1)
+if (key_select == 2 && obj_player1.key_jump && selecting == -1)
 {
     selecting = key_select
     global.key_right = -1
@@ -78,7 +78,7 @@ if (selecting == 3)
         selecting = -1
     }
 }
-if (key_select == 3 && obj_player.key_jump && selecting == -1)
+if (key_select == 3 && obj_player1.key_jump && selecting == -1)
 {
     selecting = key_select
     global.key_left = -1
@@ -91,7 +91,7 @@ if (selecting == 4)
         selecting = -1
     }
 }
-if (key_select == 4 && obj_player.key_jump && selecting == -1)
+if (key_select == 4 && obj_player1.key_jump && selecting == -1)
 {
     selecting = key_select
     global.key_jump = -1
@@ -104,7 +104,7 @@ if (selecting == 5)
         selecting = -1
     }
 }
-if (key_select == 5 && obj_player.key_jump && selecting == -1)
+if (key_select == 5 && obj_player1.key_jump && selecting == -1)
 {
     selecting = key_select
     global.key_slap = -1
@@ -117,7 +117,7 @@ if (selecting == 6)
         selecting = -1
     }
 }
-if (key_select == 6 && obj_player.key_jump && selecting == -1)
+if (key_select == 6 && obj_player1.key_jump && selecting == -1)
 {
     selecting = key_select
     global.key_attack = -1
@@ -130,7 +130,7 @@ if (selecting == 7)
         selecting = -1
     }
 }
-if (key_select == 7 && obj_player.key_jump && selecting == -1)
+if (key_select == 7 && obj_player1.key_jump && selecting == -1)
 {
     selecting = key_select
     global.key_taunt = -1
@@ -143,7 +143,7 @@ if (selecting == 8)
         selecting = -1
     }
 }
-if (key_select == 8 && obj_player.key_jump && selecting == -1)
+if (key_select == 8 && obj_player1.key_jump && selecting == -1)
 {
     selecting = key_select
     global.key_start = -1

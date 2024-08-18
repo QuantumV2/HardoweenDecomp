@@ -2,14 +2,20 @@ with (obj_player)
 {
     if (state == (23 << 0) || state == (24 << 0))
     {
-        image_index = 0
-        image_index = 1
-        image_index = 2
-        image_index = 3
-        image_index = 4
-        image_index = 5
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 0
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 1
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 2
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 3
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 4
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 5
         if (x != other.x)
-            obj_player.hsp = (sign((x - other.x)) * 5)
+            obj_player.hsp = (sign(x - other.x)) * 5
         else
             obj_player.hsp = 5
         vsp = -3
@@ -25,16 +31,25 @@ with (obj_player)
         if (global.collect > 20)
         {
             global.collect -= 20
-            hsp = (-obj_player.xscale)
-            vsp = random_range(-3, -6)
-            hsp = (-obj_player.xscale)
-            vsp = random_range(-3, -6)
+            with (instance_create(x, y, obj_pizzaloss))
+            {
+                hsp = (-obj_player.xscale)
+                vsp = random_range(-3, -6)
+            }
+            with (instance_create(x, y, obj_pizzaloss))
+            {
+                hsp = (-obj_player.xscale)
+                vsp = random_range(-3, -6)
+            }
         }
         if (global.collect == 10)
         {
             global.collect -= 10
-            hsp = (-obj_player.xscale)
-            vsp = random_range(-3, -6)
+            with (instance_create(x, y, obj_pizzaloss))
+            {
+                hsp = (-obj_player.xscale)
+                vsp = random_range(-3, -6)
+            }
         }
         scr_sound(sound_touchspike)
         alarm[8] = 60

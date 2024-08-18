@@ -1,3 +1,3 @@
-bg = 1229
-bg2 = 1227
-bg3 = 1225
+bg = bg_sewer1
+bg2 = bg_sewer2
+bg3 = bg_sewer3

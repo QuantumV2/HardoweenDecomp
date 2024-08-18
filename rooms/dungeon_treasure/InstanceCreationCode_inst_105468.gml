@@ -1,2 +1,2 @@
-sprgot = 1064
-spridle = 1063
+sprgot = spr_foodtreasuregot
+spridle = spr_foodtreasure

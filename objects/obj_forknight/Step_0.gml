@@ -44,11 +44,11 @@ if (obj_player.x > (x - 400) && obj_player.x < (x + 400) && y <= (obj_player.y +
         state = (92 << 0)
         sprite_index = scaredspr
         if (x != obj_player.x)
-            image_xscale = (-(sign((x - obj_player.x))))
+            image_xscale = (-(sign(x - obj_player.x)))
     }
 }
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (hitboxcreate == 0 && state == (100 << 0))
 {
     hitboxcreate = 1

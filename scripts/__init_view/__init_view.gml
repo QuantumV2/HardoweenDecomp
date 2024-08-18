@@ -1,3 +1,3 @@
-function __init_view () {
+function __init_view() {
 
 }

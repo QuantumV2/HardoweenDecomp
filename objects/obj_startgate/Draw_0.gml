@@ -1,5 +1,6 @@
 draw_self()
-draw_set_font(global.bigfont)
+font = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890:", 1, 0)
+draw_set_font(font)
 draw_set_halign(fa_center)
 draw_set_color(c_white)
 if place_meeting(x, y, obj_player)
@@ -30,82 +31,117 @@ if place_meeting(x, y, obj_player)
         draw_text(x, (y - 150), global.snickchallengehighscore)
     if (level == "entrance")
     {
-	    var toppins = [
-	        [spr_pizzakinshroom, spr_pizzakinshroom_pause, global.entrancetoppin1],
-	        [spr_pizzakincheese, spr_pizzakincheese_pause, global.entrancetoppin2],
-	        [spr_pizzakintomato, spr_pizzakintomato_pause, global.entrancetoppin3],
-	        [spr_pizzakinsausage, spr_pizzakinsausage_pause, global.entrancetoppin4],
-	        [spr_pizzakinpineapple, spr_pizzakinpineapple_pause, global.entrancetoppin5]
-	    ];
-
-	    for (var i = 0; i < array_length(toppins); i++)
-	    {
-	        var sprite = (toppins[i][2] == 1) ? toppins[i][0] : toppins[i][1];
-	        draw_sprite(sprite, -1, (x - 75) + (i * 40), (y - 100));
-	    }
+        if (global.entrancetoppin1 == 1)
+            draw_sprite(spr_pizzakinshroom, -1, (x - 75), (y - 100))
+        else
+            draw_sprite(spr_pizzakinshroom_pause, -1, (x - 75), (y - 100))
+        if (global.entrancetoppin2 == 1)
+            draw_sprite(spr_pizzakincheese, -1, (x - 35), (y - 100))
+        else
+            draw_sprite(spr_pizzakincheese_pause, -1, (x - 35), (y - 100))
+        if (global.entrancetoppin3 == 1)
+            draw_sprite(spr_pizzakintomato, -1, x, (y - 100))
+        else
+            draw_sprite(spr_pizzakintomato_pause, -1, x, (y - 100))
+        if (global.entrancetoppin4 == 1)
+            draw_sprite(spr_pizzakinsausage, -1, (x + 35), (y - 100))
+        else
+            draw_sprite(spr_pizzakinsausage_pause, -1, (x + 35), (y - 100))
+        if (global.entrancetoppin5 == 1)
+            draw_sprite(spr_pizzakinpineapple, -1, (x + 75), (y - 100))
+        else
+            draw_sprite(spr_pizzakinpineapple_pause, -1, (x + 75), (y - 100))
     }
     if (level == "medieval")
     {
-	    var toppins = [
-	        [spr_pizzakinshroom, spr_pizzakinshroom_pause, global.medievaltoppin1],
-	        [spr_pizzakincheese, spr_pizzakincheese_pause, global.medievaltoppin2],
-	        [spr_pizzakintomato, spr_pizzakintomato_pause, global.medievaltoppin3],
-	        [spr_pizzakinsausage, spr_pizzakinsausage_pause, global.medievaltoppin4],
-	        [spr_pizzakinpineapple, spr_pizzakinpineapple_pause, global.medievaltoppin5]
-	    ];
-
-	    for (var i = 0; i < array_length(toppins); i++)
-	    {
-	        var sprite = (toppins[i][2] == 1) ? toppins[i][0] : toppins[i][1];
-	        draw_sprite(sprite, -1, (x - 75) + (i * 40), (y - 100));
-	    }
+        if (global.medievaltoppin1 == 1)
+            draw_sprite(spr_pizzakinshroom, -1, (x - 75), (y - 100))
+        else
+            draw_sprite(spr_pizzakinshroom_pause, -1, (x - 75), (y - 100))
+        if (global.medievaltoppin2 == 1)
+            draw_sprite(spr_pizzakincheese, -1, (x - 35), (y - 100))
+        else
+            draw_sprite(spr_pizzakincheese_pause, -1, (x - 35), (y - 100))
+        if (global.medievaltoppin3 == 1)
+            draw_sprite(spr_pizzakintomato, -1, x, (y - 100))
+        else
+            draw_sprite(spr_pizzakintomato_pause, -1, x, (y - 100))
+        if (global.medievaltoppin4 == 1)
+            draw_sprite(spr_pizzakinsausage, -1, (x + 35), (y - 100))
+        else
+            draw_sprite(spr_pizzakinsausage_pause, -1, (x + 35), (y - 100))
+        if (global.medievaltoppin5 == 1)
+            draw_sprite(spr_pizzakinpineapple, -1, (x + 75), (y - 100))
+        else
+            draw_sprite(spr_pizzakinpineapple_pause, -1, (x + 75), (y - 100))
     }
     if (level == "chateau")
     {
-	    var toppins = [
-	        [spr_pizzakinshroom, spr_pizzakinshroom_pause, global.chateautoppin1],
-	        [spr_pizzakincheese, spr_pizzakincheese_pause, global.chateautoppin2],
-	        [spr_pizzakintomato, spr_pizzakintomato_pause, global.chateautoppin3],
-	        [spr_pizzakinsausage, spr_pizzakinsausage_pause, global.chateautoppin4],
-	        [spr_pizzakinpineapple, spr_pizzakinpineapple_pause, global.chateautoppin5]
-	    ];
-
-	    for (var i = 0; i < array_length(toppins); i++)
-	    {
-	        var sprite = (toppins[i][2] == 1) ? toppins[i][0] : toppins[i][1];
-	        draw_sprite(sprite, -1, (x - 75) + (i * 40), (y - 100));
-	    }
+        if (global.chateautoppin1 == 1)
+            draw_sprite(spr_pizzakinshroom, -1, (x - 75), (y - 100))
+        else
+            draw_sprite(spr_pizzakinshroom_pause, -1, (x - 75), (y - 100))
+        if (global.chateautoppin2 == 1)
+            draw_sprite(spr_pizzakincheese, -1, (x - 35), (y - 100))
+        else
+            draw_sprite(spr_pizzakincheese_pause, -1, (x - 35), (y - 100))
+        if (global.chateautoppin3 == 1)
+            draw_sprite(spr_pizzakintomato, -1, x, (y - 100))
+        else
+            draw_sprite(spr_pizzakintomato_pause, -1, x, (y - 100))
+        if (global.chateautoppin4 == 1)
+            draw_sprite(spr_pizzakinsausage, -1, (x + 35), (y - 100))
+        else
+            draw_sprite(spr_pizzakinsausage_pause, -1, (x + 35), (y - 100))
+        if (global.chateautoppin5 == 1)
+            draw_sprite(spr_pizzakinpineapple, -1, (x + 75), (y - 100))
+        else
+            draw_sprite(spr_pizzakinpineapple_pause, -1, (x + 75), (y - 100))
     }
     if (level == "ruin")
     {
-	    var toppins = [
-	        [spr_pizzakinshroom, spr_pizzakinshroom_pause, global.ruintoppin1],
-	        [spr_pizzakincheese, spr_pizzakincheese_pause, global.ruintoppin2],
-	        [spr_pizzakintomato, spr_pizzakintomato_pause, global.ruintoppin3],
-	        [spr_pizzakinsausage, spr_pizzakinsausage_pause, global.ruintoppin4],
-	        [spr_pizzakinpineapple, spr_pizzakinpineapple_pause, global.ruintoppin5]
-	    ];
-
-	    for (var i = 0; i < array_length(toppins); i++)
-	    {
-	        var sprite = (toppins[i][2] == 1) ? toppins[i][0] : toppins[i][1];
-	        draw_sprite(sprite, -1, (x - 75) + (i * 40), (y - 100));
-	    }
+        if (global.ruintoppin1 == 1)
+            draw_sprite(spr_pizzakinshroom, -1, (x - 75), (y - 100))
+        else
+            draw_sprite(spr_pizzakinshroom_pause, -1, (x - 75), (y - 100))
+        if (global.ruintoppin2 == 1)
+            draw_sprite(spr_pizzakincheese, -1, (x - 35), (y - 100))
+        else
+            draw_sprite(spr_pizzakincheese_pause, -1, (x - 35), (y - 100))
+        if (global.ruintoppin3 == 1)
+            draw_sprite(spr_pizzakintomato, -1, x, (y - 100))
+        else
+            draw_sprite(spr_pizzakintomato_pause, -1, x, (y - 100))
+        if (global.ruintoppin4 == 1)
+            draw_sprite(spr_pizzakinsausage, -1, (x + 35), (y - 100))
+        else
+            draw_sprite(spr_pizzakinsausage_pause, -1, (x + 35), (y - 100))
+        if (global.ruintoppin5 == 1)
+            draw_sprite(spr_pizzakinpineapple, -1, (x + 75), (y - 100))
+        else
+            draw_sprite(spr_pizzakinpineapple_pause, -1, (x + 75), (y - 100))
     }
     if (level == "dungeon")
     {
-	    var toppins = [
-	        [spr_pizzakinshroom, spr_pizzakinshroom_pause, global.dungeontoppin1],
-	        [spr_pizzakincheese, spr_pizzakincheese_pause, global.dungeontoppin2],
-	        [spr_pizzakintomato, spr_pizzakintomato_pause, global.dungeontoppin3],
-	        [spr_pizzakinsausage, spr_pizzakinsausage_pause, global.dungeontoppin4],
-	        [spr_pizzakinpineapple, spr_pizzakinpineapple_pause, global.dungeontoppin5]
-	    ];
-
-	    for (var i = 0; i < array_length(toppins); i++)
-	    {
-	        var sprite = (toppins[i][2] == 1) ? toppins[i][0] : toppins[i][1];
-	        draw_sprite(sprite, -1, (x - 75) + (i * 40), (y - 100));
-	    }
+        if (global.dungeontoppin1 == 1)
+            draw_sprite(spr_pizzakinshroom, -1, (x - 75), (y - 100))
+        else
+            draw_sprite(spr_pizzakinshroom_pause, -1, (x - 75), (y - 100))
+        if (global.dungeontoppin2 == 1)
+            draw_sprite(spr_pizzakincheese, -1, (x - 35), (y - 100))
+        else
+            draw_sprite(spr_pizzakincheese_pause, -1, (x - 35), (y - 100))
+        if (global.dungeontoppin3 == 1)
+            draw_sprite(spr_pizzakintomato, -1, x, (y - 100))
+        else
+            draw_sprite(spr_pizzakintomato_pause, -1, x, (y - 100))
+        if (global.dungeontoppin4 == 1)
+            draw_sprite(spr_pizzakinsausage, -1, (x + 35), (y - 100))
+        else
+            draw_sprite(spr_pizzakinsausage_pause, -1, (x + 35), (y - 100))
+        if (global.dungeontoppin5 == 1)
+            draw_sprite(spr_pizzakinpineapple, -1, (x + 75), (y - 100))
+        else
+            draw_sprite(spr_pizzakinpineapple_pause, -1, (x + 75), (y - 100))
     }
 }

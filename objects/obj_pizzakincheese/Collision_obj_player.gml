@@ -4,7 +4,7 @@ if (obj_player.state != (72 << 0) && global.cheesefollow == 0)
     global.style += 50
     ds_list_add(global.saveroom, id)
     if (global.toppintotal < 5)
-        obj_tv.message = (("YOU NEED " + string((5 - global.toppintotal))) + " MORE TOPPINS!")
+        obj_tv.message = "YOU NEED " + (string(5 - global.toppintotal)) + " MORE TOPPINS!"
     if (global.toppintotal == 5)
         obj_tv.message = "YOU HAVE ALL TOPPINS!"
     obj_tv.showtext = 1

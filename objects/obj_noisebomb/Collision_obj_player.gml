@@ -27,7 +27,7 @@ if (obj_player.state != (72 << 0) && global.panic == 0)
     }
 
     global.wave = 0
-    global.maxwave = (((global.minutes * 60) + global.seconds) * 60)
+    global.maxwave = (global.minutes * 60 + global.seconds) * 60
     if global.panicbg
         scr_panicbg_init()
 }

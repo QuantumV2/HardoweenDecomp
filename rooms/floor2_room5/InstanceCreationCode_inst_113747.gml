@@ -1,2 +1,2 @@
-bg = 1189
-bg2 = 1194
+bg = bg_castle4
+bg2 = bg_castle1

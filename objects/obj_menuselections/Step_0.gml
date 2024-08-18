@@ -117,9 +117,9 @@ else if (levelselect == 0)
         scr_sound(sound_points)
     }
     if (optionselect == 0)
-        obj_cursor.y = (y - 24)
+        obj_cursor.y = y - 24
     else if (optionselect == 1)
-        obj_cursor.y = (y + 18)
+        obj_cursor.y = y + 18
     if (optionselect == 0 && key_jump && (!instance_exists(obj_keyconfig)))
     {
         scr_sound(sound_pizzagot)

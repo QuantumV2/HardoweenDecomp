@@ -63,19 +63,19 @@ if (x != obj_player.x)
         {
             if (sprite_index == spr_pizzaboy)
                 instance_create(x, y, obj_balloonpop)
-            image_xscale = (-(sign((x - obj_player.x))))
+            image_xscale = (-(sign(x - obj_player.x)))
             roaming = 1
             attack = 1
             vsp = -11
-            scr_sound(sfx_punch)
+            scr_sound(sound_enemythrow)
             image_index = 0
-            image_xscale = (-(sign((x - obj_player.x))))
+            image_xscale = (-(sign(x - obj_player.x)))
             state = (94 << 0)
         }
     }
 }
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (state != (107 << 0))
     depth = 0
 if (state != (104 << 0))

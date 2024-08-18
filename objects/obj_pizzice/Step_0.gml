@@ -49,7 +49,7 @@ if (hitboxcreate == 0 && state == (94 << 0) && obj_player.state != (89 << 0) && 
 if (state != (104 << 0))
     birdcreated = 0
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (state != (107 << 0))
     depth = 0
 if (state != (104 << 0))

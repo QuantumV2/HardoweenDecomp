@@ -1,3 +1,3 @@
-function __init_background () {
+function __init_background() {
 
 }

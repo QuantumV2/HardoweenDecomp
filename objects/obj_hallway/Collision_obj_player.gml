@@ -1,7 +1,7 @@
 with (other.id)
 {
     x = other.x
-    y = (other.y + (other.sprite_height - 46))
+    y = other.y + other.sprite_height - 46
     if (!instance_exists(obj_fadeout))
     {
         obj_player1.targetDoor = other.targetDoor

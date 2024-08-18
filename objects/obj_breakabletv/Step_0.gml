@@ -12,7 +12,7 @@ if place_meeting(x, y, obj_player)
         }
         if (state == (89 << 0))
         {
-            hsp = ((-xscale) * 3)
+            hsp = (-xscale) * 3
             state = (71 << 0)
             mach2 = 0
             image_index = 0
@@ -31,21 +31,21 @@ if (grabbed == 1)
         grounded = 0
         x = obj_player.x
         if (obj_player.sprite_index != spr_player_haulingstart)
-            y = (obj_player.y - 40)
+            y = obj_player.y - 40
         else if (floor(obj_player.image_index) == 0)
             y = obj_player.y
         else if (floor(obj_player.image_index) == 1)
-            y = (obj_player.y - 10)
+            y = obj_player.y - 10
         else if (floor(obj_player.image_index) == 2)
-            y = (obj_player.y - 20)
+            y = obj_player.y - 20
         else if (floor(obj_player.image_index) == 3)
-            y = (obj_player.y - 30)
+            y = obj_player.y - 30
         image_xscale = (-obj_player.xscale)
     }
     with (obj_player)
     {
         scr_getinput()
-        move = (key_left2 + key_right2)
+        move = key_left2 + key_right2
         if (!((state == (45 << 0) || state == (27 << 0) || state == (40 << 0) || state == (41 << 0) || state == (9 << 0) || state == (46 << 0) || state == (42 << 0) || state == (47 << 0) || state == (48 << 0) || state == (49 << 0))))
         {
             other.x = x
@@ -56,21 +56,21 @@ if (grabbed == 1)
     hsp = 0
     if (obj_player.state == (46 << 0))
     {
-        instance_create((x + (obj_player.xscale * 30)), y, obj_bumpeffect)
+        instance_create((x + obj_player.xscale * 30), y, obj_bumpeffect)
         grabbed = 0
         grav = 0.5
         x = obj_player.x
         vsp = 0
-        y = (obj_player.y - 5)
+        y = obj_player.y - 5
         thrown = 1
-        hsp = ((-image_xscale) * 25)
+        hsp = (-image_xscale) * 25
         grav = 0
         instance_create(x, y, obj_slapstar)
         instance_create(x, y, obj_baddiegibs)
         with (obj_camera)
         {
             shake_mag = 3
-            shake_mag_acc = (3 / room_speed)
+            shake_mag_acc = 3 / room_speed
         }
     }
     if (obj_player.state == (49 << 0))
@@ -85,12 +85,12 @@ if (grabbed == 1)
             vsp = 15
         if (obj_player.sprite_index == spr_player_diagonaldownthrow)
         {
-            hsp = ((-image_xscale) * 10)
+            hsp = (-image_xscale) * 10
             vsp = 15
         }
         if (obj_player.sprite_index == spr_player_diagonalupthrow)
         {
-            hsp = ((-image_xscale) * 10)
+            hsp = (-image_xscale) * 10
             vsp = -15
         }
         instance_create(x, y, obj_slapstar)
@@ -98,7 +98,7 @@ if (grabbed == 1)
         with (obj_camera)
         {
             shake_mag = 3
-            shake_mag_acc = (3 / room_speed)
+            shake_mag_acc = 3 / room_speed
         }
     }
     if (obj_player.state == (40 << 0))
@@ -108,17 +108,17 @@ if (grabbed == 1)
         thrown = 1
         x = obj_player.x
         y = obj_player.y
-        hsp = ((-image_xscale) * 10)
+        hsp = (-image_xscale) * 10
         vsp = -10
     }
     if (obj_player.state == (48 << 0))
     {
-        instance_create((x + ((-obj_player.xscale) * 15)), (y - 50), obj_bumpeffect)
+        instance_create((x + (-obj_player.xscale) * 15), (y - 50), obj_bumpeffect)
         grav = 0.5
         thrown = 1
         x = obj_player.x
         y = obj_player.y
-        hsp = ((-image_xscale) * 2)
+        hsp = (-image_xscale) * 2
         grabbed = 0
         vsp = -20
         instance_create(x, y, obj_slapstar)
@@ -127,12 +127,12 @@ if (grabbed == 1)
         with (obj_camera)
         {
             shake_mag = 3
-            shake_mag_acc = (3 / room_speed)
+            shake_mag_acc = 3 / room_speed
         }
     }
     if (obj_player.state == (9 << 0))
     {
-        x = (obj_player.x + (obj_player.xscale * 15))
+        x = obj_player.x + obj_player.xscale * 15
         y = obj_player.y
     }
     if (obj_player.state == (42 << 0))
@@ -142,13 +142,13 @@ if (grabbed == 1)
             if (floor(obj_player.image_index) == 0)
             {
                 depth = 0
-                x = (obj_player.x + (obj_player.xscale * 10))
+                x = obj_player.x + obj_player.xscale * 10
                 y = obj_player.y
             }
             if (floor(obj_player.image_index) == 1)
             {
                 depth = 0
-                x = (obj_player.x + (obj_player.xscale * 5))
+                x = obj_player.x + obj_player.xscale * 5
                 y = obj_player.y
             }
             if (floor(obj_player.image_index) == 2)
@@ -160,19 +160,19 @@ if (grabbed == 1)
             if (floor(obj_player.image_index) == 3)
             {
                 depth = 0
-                x = (obj_player.x + (obj_player.xscale * -5))
+                x = obj_player.x + obj_player.xscale * -5
                 y = obj_player.y
             }
             if (floor(obj_player.image_index) == 4)
             {
                 depth = 0
-                x = (obj_player.x + (obj_player.xscale * -10))
+                x = obj_player.x + obj_player.xscale * -10
                 y = obj_player.y
             }
             if (floor(obj_player.image_index) == 5)
             {
                 depth = -8
-                x = (obj_player.x + (obj_player.xscale * -5))
+                x = obj_player.x + obj_player.xscale * -5
                 y = obj_player.y
             }
             if (floor(obj_player.image_index) == 6)
@@ -184,7 +184,7 @@ if (grabbed == 1)
             if (floor(obj_player.image_index) == 7)
             {
                 depth = -8
-                x = (obj_player.x + (obj_player.xscale * 5))
+                x = obj_player.x + obj_player.xscale * 5
                 y = obj_player.y
             }
         }
@@ -192,7 +192,7 @@ if (grabbed == 1)
         {
             depth = -7
             x = obj_player.x
-            y = (obj_player.y - 40)
+            y = obj_player.y - 40
         }
         if (obj_player.sprite_index == obj_player.spr_piledriverland)
         {
@@ -203,7 +203,7 @@ if (grabbed == 1)
             x = obj_player.x
             y = obj_player.y
             grav = 0.5
-            hsp = ((-image_xscale) * 10)
+            hsp = (-image_xscale) * 10
             vsp = -10
         }
     }

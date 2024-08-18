@@ -9,7 +9,7 @@ if (x <= (xstarte + 6) && x >= (xstarte - 6) && y <= (ystarte + 6) && y >= (ysta
     delay--
     if (delay <= 0)
     {
-        scr_sound(sfx_punch)
+        scr_sound(sound_enemythrow)
         grav = 0.35
         vsp = 10
         sprite_index = spr_grabbiehand_fall

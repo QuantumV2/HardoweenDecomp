@@ -4,7 +4,7 @@ with (obj_player)
     {
         xscale = other.image_xscale
         mach2 = 100
-        machhitAnim = 0
+        machhitAnim = false
         state = (89 << 0)
         flash = 1
         sprite_index = spr_player_mach4

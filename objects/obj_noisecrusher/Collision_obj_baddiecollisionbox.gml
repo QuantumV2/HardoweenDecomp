@@ -13,7 +13,7 @@ if instance_exists(other.baddieID)
             instance_create(x, y, obj_bumpeffect)
             other.stunned = 200
             other.vsp = -5
-            other.hsp = ((-other.image_xscale) * 3)
+            other.hsp = (-other.image_xscale) * 3
         }
     }
 }

@@ -12,7 +12,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
     with (obj_camera)
     {
         shake_mag = 3
-        shake_mag_acc = (3 / room_speed)
+        shake_mag_acc = 3 / room_speed
     }
     instance_destroy()
     with (instance_create(x, y, obj_sausageman_dead))
@@ -41,7 +41,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
     }
 
     global.wave = 0
-    global.maxwave = (((global.minutes * 60) + global.seconds) * 60)
+    global.maxwave = (global.minutes * 60 + global.seconds) * 60
     if global.panicbg
         scr_panicbg_init()
     ds_list_add(global.saveroom, id)

@@ -38,7 +38,7 @@ if (state == (104 << 0) && stunned > 40 && birdcreated == 0)
 if (state != (104 << 0))
     birdcreated = 0
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (hp != 5)
     hp = 5
 if (state != (107 << 0))

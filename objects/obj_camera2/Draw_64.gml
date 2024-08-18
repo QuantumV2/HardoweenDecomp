@@ -67,7 +67,8 @@ if (obj_player2.state != (54 << 0))
         alpha = 0.5
     else
         alpha = 1
-    draw_set_font(global.bigfont)
+    font = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890:", 1, 0)
+    draw_set_font(font)
     draw_set_halign(fa_center)
     draw_set_color(c_white)
     if (global.panic == 1)
@@ -78,7 +79,7 @@ if (obj_player2.state != (54 << 0))
                 draw_set_color(c_red)
             else
                 draw_set_color(c_white)
-            draw_text((random_range(1, -1) + 480), (random_range(1, -1) + 65), string_hash_to_newline(((string(global.minutes) + ":0") + string(global.seconds))))
+            draw_text(((random_range(1, -1)) + 480), ((random_range(1, -1)) + 65), string_hash_to_newline(string(global.minutes) + ":0" + string(global.seconds)))
         }
         else if (global.seconds >= 10)
         {
@@ -86,7 +87,7 @@ if (obj_player2.state != (54 << 0))
                 draw_set_color(c_red)
             else
                 draw_set_color(c_white)
-            draw_text((random_range(1, -1) + 480), (random_range(1, -1) + 65), string_hash_to_newline(((string(global.minutes) + ":") + string(global.seconds))))
+            draw_text(((random_range(1, -1)) + 480), ((random_range(1, -1)) + 65), string_hash_to_newline(string(global.minutes) + ":" + string(global.seconds)))
         }
     }
     if (global.key_inv == 1)

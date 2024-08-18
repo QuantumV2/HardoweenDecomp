@@ -19,14 +19,17 @@ if (floor(obj_player1.image_index) == (obj_player1.image_number - 1) && obj_play
         if (other.level == "snickchallenge")
         {
             global.wave = 0
-            global.maxwave = (((global.minutes * 60) + global.seconds) * 60)
+            global.maxwave = (global.minutes * 60 + global.seconds) * 60
             if global.panicbg
                 scr_panicbg_init()
             global.snickchallenge = 1
             global.collect = 10000
-            alarm[1] = 60
-            global.seconds = 59
-            global.minutes = 9
+            with (obj_camera)
+            {
+                alarm[1] = 60
+                global.seconds = 59
+                global.minutes = 9
+            }
         }
         obj_music.fadeoff = 0
         targetDoor = other.targetDoor

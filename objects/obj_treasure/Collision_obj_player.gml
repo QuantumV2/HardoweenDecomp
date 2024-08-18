@@ -18,7 +18,7 @@ with (obj_player)
         }
         other.sprite_index = other.sprgot
         other.x = obj_player.x
-        other.y = (obj_player.y - 35)
+        other.y = obj_player.y - 35
         obj_tv.showtext = 1
         obj_tv.message = "YOU GOT A TOWER SECRET TREASURE!!!"
         obj_tv.alarm[0] = 30

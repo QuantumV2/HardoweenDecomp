@@ -8,7 +8,10 @@ with (obj_player)
             vsp = -11
         if (state == (57 << 0))
             sprite_index = spr_player_Sjump
-        image_index = 0
-        image_speed = 0.35
+        with (instance_place(x, (y + 1), obj_tomatoblock))
+        {
+            image_index = 0
+            image_speed = 0.35
+        }
     }
 }

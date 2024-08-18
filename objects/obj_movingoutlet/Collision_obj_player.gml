@@ -2,14 +2,20 @@ with (obj_player)
 {
     if ((state == (23 << 0) || state == (24 << 0) || state == (17 << 0)) && cutscene == 0)
     {
-        image_index = 0
-        image_index = 1
-        image_index = 2
-        image_index = 3
-        image_index = 4
-        image_index = 5
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 0
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 1
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 2
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 3
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 4
+        with (instance_create(x, y, obj_knightdebris))
+            image_index = 5
         if (x != other.x)
-            obj_player.hsp = (sign((x - other.x)) * 5)
+            obj_player.hsp = (sign(x - other.x)) * 5
         else
             obj_player.hsp = 5
         vsp = -3
@@ -22,13 +28,18 @@ with (obj_player)
         instance_create(x, y, obj_bombexplosion)
     else if (state == (14 << 0))
     {
-        image_index = 0
-        image_index = 1
-        image_index = 2
-        image_index = 3
-        image_index = 4
+        with (instance_create(x, y, obj_boxxeddebris))
+            image_index = 0
+        with (instance_create(x, y, obj_boxxeddebris))
+            image_index = 1
+        with (instance_create(x, y, obj_boxxeddebris))
+            image_index = 2
+        with (instance_create(x, y, obj_boxxeddebris))
+            image_index = 3
+        with (instance_create(x, y, obj_boxxeddebris))
+            image_index = 4
         if (x != other.x)
-            obj_player.hsp = (sign((x - other.x)) * 5)
+            obj_player.hsp = (sign(x - other.x)) * 5
         else
             obj_player.hsp = 5
         vsp = -3
@@ -49,7 +60,7 @@ with (obj_player)
         instance_create(x, y, obj_slimedebris)
         instance_create(x, y, obj_slimedebris)
         if (x != other.x)
-            obj_player.hsp = (sign((x - other.x)) * 5)
+            obj_player.hsp = (sign(x - other.x)) * 5
         else
             obj_player.hsp = 5
         vsp = -3

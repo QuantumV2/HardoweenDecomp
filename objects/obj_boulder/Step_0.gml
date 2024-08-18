@@ -17,7 +17,7 @@ if (place_meeting(x, y, obj_player) && activated == 1 && hitwall == 0 && obj_pla
     }
 }
 if (activated == 1 && vsp > 0 && place_meeting(x, (y + 1), obj_solid))
-    hsp = (image_xscale * 8)
+    hsp = image_xscale * 8
 if (place_meeting((x + hsp), y, obj_solid) && activated == 1 && (!(place_meeting((x + hsp), y, obj_slope))) && hitwall == 0 && place_meeting(x, (y + 1), obj_solid))
 {
     hitwall = 1

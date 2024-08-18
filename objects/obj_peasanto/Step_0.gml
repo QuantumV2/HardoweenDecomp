@@ -58,7 +58,7 @@ if (state != (100 << 0) && state != (92 << 0) && angry == 0)
 if (state != (104 << 0) && state != (107 << 0) && state != (92 << 0) && state != (94 << 0))
     angry = 0
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (state != (107 << 0))
     depth = 0
 if (state != (104 << 0))

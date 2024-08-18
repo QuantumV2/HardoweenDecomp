@@ -41,7 +41,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
             {
                 scr_soundeffect(sfx_stompenemy)
                 if (x != other.baddieID.x)
-                    other.baddieID.image_xscale = (-(sign((other.baddieID.x - x))))
+                    other.baddieID.image_xscale = (-(sign(other.baddieID.x - x)))
                 image_index = 0
                 other.baddieID.state = (104 << 0)
                 if (other.baddieID.stunned < 100)
@@ -49,7 +49,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
                 if key_jump2
                 {
                     instance_create(x, (y + 50), obj_stompeffect)
-                    stompAnim = 1
+                    stompAnim = true
                     other.baddieID.image_index = 0
                     vsp = -14
                     if (state != (45 << 0))
@@ -58,7 +58,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
                 else
                 {
                     instance_create(x, (y + 50), obj_stompeffect)
-                    stompAnim = 1
+                    stompAnim = true
                     other.baddieID.image_index = 0
                     vsp = -9
                     if (state != (45 << 0))
@@ -75,9 +75,9 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
                 if (other.baddieID.stunned < 100)
                     other.baddieID.stunned = 100
                 if (x != other.baddieID.x)
-                    other.baddieID.image_xscale = (-(sign((other.baddieID.x - x))))
+                    other.baddieID.image_xscale = (-(sign(other.baddieID.x - x)))
                 other.baddieID.vsp = -5
-                other.baddieID.hsp = ((-other.baddieID.image_xscale) * 2)
+                other.baddieID.hsp = (-other.baddieID.image_xscale) * 2
                 other.baddieID.state = (104 << 0)
                 other.baddieID.image_index = 0
             }
@@ -101,7 +101,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
                 vsp = -7
                 state = (0 << 0)
                 other.baddieID.vsp = -4
-                other.baddieID.hsp = (xscale * 5)
+                other.baddieID.hsp = xscale * 5
             }
             if (instance_exists(other.baddieID) && state == (21 << 0))
             {
@@ -116,14 +116,17 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
                 else
                 {
                     state = (37 << 0)
-                    image_xscale = other.image_xscale
+                    with (instance_create(x, y, obj_pistoleffect))
+                        image_xscale = other.image_xscale
                     image_index = 0
                     sprite_index = spr_shotgunshoot
                     if (character == "P")
                     {
-                        instance_create((x + (image_xscale * 20)), (y + 20), obj_shotgunbullet)
-                        spdh = 4
-                        spdh = -4
+                        instance_create((x + image_xscale * 20), (y + 20), obj_shotgunbullet)
+                        with (instance_create((x + image_xscale * 20), (y + 20), obj_shotgunbullet))
+                            spdh = 4
+                        with (instance_create((x + image_xscale * 20), (y + 20), obj_shotgunbullet))
+                            spdh = -4
                     }
                     instance_destroy(other.baddieID)
                     instance_destroy(other.id)
@@ -156,7 +159,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
             {
                 scr_soundeffect(sfx_stompenemy)
                 if (x != other.baddieID.x)
-                    other.baddieID.image_xscale = (-(sign((other.baddieID.x - x))))
+                    other.baddieID.image_xscale = (-(sign(other.baddieID.x - x)))
                 image_index = 0
                 other.baddieID.state = (104 << 0)
                 if (other.baddieID.stunned < 100)
@@ -166,7 +169,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
                     other.baddieID.vsp = -5
                     instance_create(x, (y + 50), obj_stompeffect)
                     other.baddieID.state = (100 << 0)
-                    stompAnim = 1
+                    stompAnim = true
                     other.baddieID.image_index = 0
                     vsp = -14
                     if (state != (45 << 0))
@@ -176,7 +179,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
                 {
                     other.baddieID.vsp = -5
                     instance_create(x, (y + 50), obj_stompeffect)
-                    stompAnim = 1
+                    stompAnim = true
                     other.baddieID.image_index = 0
                     vsp = -9
                     if (state != (45 << 0))
@@ -193,9 +196,9 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
                 if (other.baddieID.stunned < 30)
                     other.baddieID.stunned = 30
                 if (x != other.baddieID.x)
-                    other.baddieID.image_xscale = (-(sign((other.baddieID.x - x))))
+                    other.baddieID.image_xscale = (-(sign(other.baddieID.x - x)))
                 other.baddieID.vsp = -5
-                other.baddieID.hsp = ((-other.baddieID.image_xscale) * 2)
+                other.baddieID.hsp = (-other.baddieID.image_xscale) * 2
                 other.baddieID.state = (104 << 0)
                 other.baddieID.image_index = 0
             }
@@ -218,7 +221,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
                 vsp = -7
                 state = (0 << 0)
                 other.baddieID.vsp = -4
-                other.baddieID.hsp = (xscale * 5)
+                other.baddieID.hsp = xscale * 5
             }
             if (instance_exists(other.baddieID) && (state == (21 << 0) || state == (69 << 0)) && (!((other.baddieID.state == (104 << 0) && other.baddieID.stunned > 100))))
             {
@@ -240,7 +243,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
                 movespeed = 3
                 vsp = -3
                 other.baddieID.vsp = -4
-                other.baddieID.hsp = (xscale * 5)
+                other.baddieID.hsp = xscale * 5
                 machpunchAnim = 1
                 if (other.baddieID.hp <= 0)
                 {

@@ -1,2 +1,2 @@
-bg = 1161
-bg2 = 1163
+bg = bg_factory1
+bg2 = bg_factory2

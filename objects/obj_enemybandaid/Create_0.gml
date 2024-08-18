@@ -1,1 +1,1 @@
-baddieid = 0
+baddieid = obj_slope

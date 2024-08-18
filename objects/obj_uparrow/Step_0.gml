@@ -5,4 +5,4 @@ with (obj_player)
         instance_destroy(other.id)
 }
 x = obj_player.x
-y = (obj_player.y - 50)
+y = obj_player.y - 50

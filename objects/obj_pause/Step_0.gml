@@ -1,6 +1,6 @@
 if ((!pause) && (!instance_exists(obj_fadeout)))
 {
-    if (obj_player.key_start && room != rank_room && room != Realtitlescreen && room != timesuproom)
+    if (obj_player1.key_start && room != rank_room && room != Realtitlescreen && room != timesuproom)
     {
         selected = 0
         if (!instance_exists(obj_pausefadeout))
@@ -72,7 +72,7 @@ if (pause == 1)
             global.seconds = 59
             global.minutes = 9
             global.wave = 0
-            global.maxwave = (((global.minutes * 60) + global.seconds) * 60)
+            global.maxwave = (global.minutes * 60 + global.seconds) * 60
             if global.panicbg
                 scr_panicbg_init()
             obj_player1.targetDoor = "A"

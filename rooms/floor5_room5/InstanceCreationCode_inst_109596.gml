@@ -1,1 +1,1 @@
-bg = 1167
+bg = bg_desert

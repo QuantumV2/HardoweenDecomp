@@ -14,7 +14,7 @@ with (obj_player)
     else if (state != (72 << 0) && cutscene == 0 && state != (71 << 0))
     {
         xscale = (-other.image_xscale)
-        hsp = (other.image_xscale * 10)
+        hsp = other.image_xscale * 10
         if (other.sprite_index != spr_grandpa_punch)
         {
             other.image_index = 0

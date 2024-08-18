@@ -11,7 +11,7 @@ scr_sleep(50)
 with (obj_camera)
 {
     shake_mag = 5
-    shake_mag_acc = (20 / room_speed)
+    shake_mag_acc = 20 / room_speed
 }
 instance_create(x, y, obj_bangeffect)
 instance_destroy()

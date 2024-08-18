@@ -6,7 +6,7 @@ if place_meeting(x, (y - 1), obj_player)
         {
             y += 5
             state = (58 << 0)
-            x = (other.x + 16)
+            x = other.x + 16
             y = floor(y)
             if ((y % 2) == 1)
                 y -= 1

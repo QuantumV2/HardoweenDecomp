@@ -287,10 +287,10 @@ if (character == "P")
 if (sprite_index == spr_player_winding && state != (0 << 0))
     windingAnim = 0
 if (sprite_index == spr_player_idlevomit && image_index > 28 && image_index < 43)
-    instance_create((x + random_range(-5, 5)), (y + 46), obj_vomit)
+    instance_create((x + (random_range(-5, 5))), (y + 46), obj_vomit)
 if (sprite_index == spr_player_idlevomitblood && image_index > 28 && image_index < 43)
 {
-    with (instance_create((x + random_range(-5, 5)), (y + 46), obj_vomit))
+    with (instance_create((x + (random_range(-5, 5))), (y + 46), obj_vomit))
         sprite_index = spr_vomit2
 }
 if (global.playerhealth == 1 && (!instance_exists(obj_sweat)) && obj_player.state == (0 << 0))
@@ -324,7 +324,7 @@ if (state == (89 << 0) || state == (5 << 0) || state == (6 << 0) || state == (8 
 else
     instakillmove = 0
 if (flash == 1 && alarm[0] <= 0)
-    alarm[0] = (0.15 * room_speed)
+    alarm[0] = 0.15 * room_speed
 if (state != (89 << 0) && state != (70 << 0))
     autodash = 0
 if ((state != (57 << 0) && state != (66 << 0) && state != (11 << 0)) || vsp < 0)
@@ -332,7 +332,7 @@ if ((state != (57 << 0) && state != (66 << 0) && state != (11 << 0)) || vsp < 0)
 if (state != (76 << 0) && state != (0 << 0) && state != (70 << 0))
     facehurt = 0
 if (state != (0 << 0) && state != (70 << 0))
-    machslideAnim = 0
+    machslideAnim = false
 if (state != (0 << 0))
 {
     idle = 0
@@ -351,7 +351,7 @@ if (state != (69 << 0))
 if (state != (57 << 0))
     ladderbuffer = 0
 if (state != (57 << 0))
-    stompAnim = 0
+    stompAnim = false
 if (state != (71 << 0) && state != (5 << 0) && state != (65 << 0) && state != (14 << 0) && state != (38 << 0) && sprite_index != spr_player_crouchshoot && state != (64 << 0) && state != (32 << 0) && state != (36 << 0) && state != (72 << 0) && state != (67 << 0) && state != (66 << 0))
     mask_index = spr_player_mask
 else

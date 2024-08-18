@@ -46,7 +46,7 @@ if (state == (104 << 0))
 else
     grav = 0
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (state != (107 << 0))
     depth = 0
 if (obj_player.x > (x - 400) && obj_player.x < (x + 400) && y <= (obj_player.y + 60) && y >= (obj_player.y - 60))
@@ -56,7 +56,7 @@ if (obj_player.x > (x - 400) && obj_player.x < (x + 400) && y <= (obj_player.y +
         state = (92 << 0)
         sprite_index = scaredspr
         if (x != obj_player.x)
-            image_xscale = (-(sign((x - obj_player.x))))
+            image_xscale = (-(sign(x - obj_player.x)))
     }
 }
 if (sprite_index == spr_ancho_chargestart && floor(image_index) == (image_number - 1))
@@ -77,7 +77,7 @@ if (x != obj_player1.x && state != (94 << 0) && y == ystart)
         if (state == (100 << 0))
         {
             image_index = 0
-            image_xscale = (-(sign((x - obj_player.x))))
+            image_xscale = (-(sign(x - obj_player.x)))
             state = (94 << 0)
             sprite_index = spr_ancho_chargestart
         }

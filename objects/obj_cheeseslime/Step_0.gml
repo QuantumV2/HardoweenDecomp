@@ -35,7 +35,7 @@ if (state == (104 << 0) && stunned > 100 && birdcreated == 0)
 if (state != (104 << 0))
     birdcreated = 0
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (obj_player.x > (x - 400) && obj_player.x < (x + 400) && y <= (obj_player.y + 60) && y >= (obj_player.y - 60))
 {
     if (state != (92 << 0) && obj_player1.state == (89 << 0))
@@ -43,7 +43,7 @@ if (obj_player.x > (x - 400) && obj_player.x < (x + 400) && y <= (obj_player.y +
         state = (92 << 0)
         sprite_index = scaredspr
         if (x != obj_player.x)
-            image_xscale = (-(sign((x - obj_player.x))))
+            image_xscale = (-(sign(x - obj_player.x)))
     }
 }
 if (state != (107 << 0))

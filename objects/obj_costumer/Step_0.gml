@@ -18,7 +18,7 @@ if (cutscenetimer < 0 && throwcoin == 1 && numberofcoinsthrow != 0)
     cutscenetimer = 30
     with (instance_create(x, y, obj_pizzacoin))
     {
-        hsp = (image_xscale * 5)
+        hsp = image_xscale * 5
         vsp = -7
     }
 }

@@ -1,1 +1,1 @@
-bg = 1166
+bg = bg_cavern

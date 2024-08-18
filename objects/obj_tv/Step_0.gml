@@ -3,54 +3,54 @@ if (room == rank_room || room == timesuproom || room == boss_room1 || room == Re
 if (room == entrance_1)
 {
     global.srank = 5750
-    global.arank = (global.srank - (global.srank / 4))
-    global.brank = (global.srank - ((global.srank / 4) * 2))
-    global.crank = (global.srank - ((global.srank / 4) * 3))
+    global.arank = global.srank - global.srank / 4
+    global.brank = global.srank - global.srank / 4 * 2
+    global.crank = global.srank - global.srank / 4 * 3
 }
 if (room == medieval_1 && global.snickchallenge == 0)
 {
     global.srank = 11000
-    global.arank = (global.srank - (global.srank / 4))
-    global.brank = (global.srank - ((global.srank / 4) * 2))
-    global.crank = (global.srank - ((global.srank / 4) * 3))
+    global.arank = global.srank - global.srank / 4
+    global.brank = global.srank - global.srank / 4 * 2
+    global.crank = global.srank - global.srank / 4 * 3
 }
 if (room == chateau_1)
 {
     global.srank = 10000
-    global.arank = (global.srank - (global.srank / 4))
-    global.brank = (global.srank - ((global.srank / 4) * 2))
-    global.crank = (global.srank - ((global.srank / 4) * 3))
+    global.arank = global.srank - global.srank / 4
+    global.brank = global.srank - global.srank / 4 * 2
+    global.crank = global.srank - global.srank / 4 * 3
 }
 if (room == medieval_1 && global.snickchallenge == 1)
 {
     global.srank = 8300
-    global.arank = (global.srank - (global.srank / 4))
-    global.brank = (global.srank - ((global.srank / 4) * 2))
-    global.crank = (global.srank - ((global.srank / 4) * 3))
+    global.arank = global.srank - global.srank / 4
+    global.brank = global.srank - global.srank / 4 * 2
+    global.crank = global.srank - global.srank / 4 * 3
 }
 if (room == ruin_1 && global.snickchallenge == 0)
 {
     global.srank = 11600
-    global.arank = (global.srank - (global.srank / 4))
-    global.brank = (global.srank - ((global.srank / 4) * 2))
-    global.crank = (global.srank - ((global.srank / 4) * 3))
+    global.arank = global.srank - global.srank / 4
+    global.brank = global.srank - global.srank / 4 * 2
+    global.crank = global.srank - global.srank / 4 * 3
 }
 if (room == dungeon_1 && global.snickchallenge == 0)
 {
     global.srank = 10400
-    global.arank = (global.srank - (global.srank / 4))
-    global.brank = (global.srank - ((global.srank / 4) * 2))
-    global.crank = (global.srank - ((global.srank / 4) * 3))
+    global.arank = global.srank - global.srank / 4
+    global.brank = global.srank - global.srank / 4 * 2
+    global.crank = global.srank - global.srank / 4 * 3
 }
 if (showtext == 1)
 {
-    xi = (500 + random_range(1, -1))
+    xi = 500 + (random_range(1, -1))
     if (yi > 500)
         yi -= 5
 }
 if (showtext == 0)
 {
-    xi = (500 + random_range(1, -1))
+    xi = 500 + (random_range(1, -1))
     if (yi < 600)
         yi += 1
 }
@@ -128,7 +128,7 @@ else if (global.hurtcounter >= global.hurtmilestone && obj_player.character == "
         character = "PEPPINO"
     else
         character = "THE NOISE"
-    message = (((("YOU HAVE HURT " + string(character)) + " ") + string(global.hurtmilestone)) + " TIMES...")
+    message = "YOU HAVE HURT " + string(character) + " " + string(global.hurtmilestone) + " TIMES..."
     if (tvsprite != spr_tvtalking1 && tvsprite != spr_tvtalking2 && tvsprite != spr_tvtalking3 && tvsprite != spr_tvtalking4)
         tvsprite = choose(spr_tvtalking1, spr_tvtalking2, spr_tvtalking3, spr_tvtalking4)
     global.hurtmilestone += 3
@@ -157,7 +157,7 @@ else if (global.combo != 0 && global.combotime != 0 && (tvsprite == spr_tvdefaul
     if (global.combo >= 4)
         imageindexstore = 3
     else
-        imageindexstore = (global.combo - 1)
+        imageindexstore = global.combo - 1
 }
 else if (global.combotime == 0 && tvsprite == spr_tvcombo)
 {

@@ -6,8 +6,8 @@ if (obj_player.state == (32 << 0))
 }
 if (obj_player.state == (28 << 0))
 {
-    x = (obj_player.x + ((-obj_player.image_xscale) * 20))
-    y = (obj_player.y + 30)
+    x = obj_player.x + (-obj_player.image_xscale) * 20
+    y = obj_player.y + 30
 }
 if (obj_player.state != (32 << 0) && obj_player.state != (28 << 0))
     instance_destroy()

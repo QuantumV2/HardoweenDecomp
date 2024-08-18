@@ -5,11 +5,16 @@ if (sprite_index == spr_grabbiehand_fall)
         if (state == (14 << 0))
         {
             scr_sound(sound_losetransformation)
-            image_index = 0
-            image_index = 1
-            image_index = 2
-            image_index = 3
-            image_index = 4
+            with (instance_create(x, y, obj_boxxeddebris))
+                image_index = 0
+            with (instance_create(x, y, obj_boxxeddebris))
+                image_index = 1
+            with (instance_create(x, y, obj_boxxeddebris))
+                image_index = 2
+            with (instance_create(x, y, obj_boxxeddebris))
+                image_index = 3
+            with (instance_create(x, y, obj_boxxeddebris))
+                image_index = 4
         }
         if (state == (12 << 0) || state == (13 << 0))
         {

@@ -4,7 +4,7 @@ with (obj_player)
     {
         mach2 = 0
         state = (58 << 0)
-        x = (other.x + 16)
+        x = other.x + 16
         y = floor(y)
         if ((y % 2) == 1)
             y -= 1

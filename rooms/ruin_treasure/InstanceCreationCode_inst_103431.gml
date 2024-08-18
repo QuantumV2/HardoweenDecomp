@@ -1,2 +1,2 @@
-sprgot = 1070
-spridle = 1069
+sprgot = spr_beantreasuregot
+spridle = spr_beantreasure

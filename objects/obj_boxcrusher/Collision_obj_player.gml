@@ -17,5 +17,5 @@ if (sprite_index == spr_boxcrusher_land)
     other.hsp = 0
     other.vsp = 0
     other.x = x
-    other.y = (y - 20)
+    other.y = y - 20
 }

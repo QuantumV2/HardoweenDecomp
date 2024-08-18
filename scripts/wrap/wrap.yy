@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "wrap",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "System",
-    "path": "folders/Scripts/System.yy",
+  "$GMScript":"v1",
+  "%Name":"wrap",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wrap",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

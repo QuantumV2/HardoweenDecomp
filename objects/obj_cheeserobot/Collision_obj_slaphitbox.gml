@@ -1,5 +1,5 @@
 scr_sound(sound_slaphit)
-instance_create((x + (obj_player.xscale * 40)), y, obj_punchdust)
+instance_create((x + obj_player.xscale * 40), y, obj_punchdust)
 state = (107 << 0)
 obj_player.state = (45 << 0)
 instance_destroy(other.id)

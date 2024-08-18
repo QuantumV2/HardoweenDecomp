@@ -1,9 +1,9 @@
 if (turning == 0)
-    hsp = (image_xscale * movespeed)
+    hsp = image_xscale * movespeed
 else
-    hsp = ((-image_xscale) * movespeed)
+    hsp = (-image_xscale) * movespeed
 if (flash == 1 && alarm[2] <= 0)
-    alarm[2] = (0.15 * room_speed)
+    alarm[2] = 0.15 * room_speed
 if (state != (107 << 0))
     depth = 0
 if (state != (104 << 0))
@@ -24,9 +24,9 @@ if (attack == 1)
 }
 if (movespeed == 0)
     turning = 0
-if (image_xscale != sign((obj_player.x - x)) && x != obj_player.x)
+if (image_xscale != sign(obj_player.x - x) && x != obj_player.x)
 {
-    image_xscale = sign((obj_player.x - x))
+    image_xscale = sign(obj_player.x - x)
     turning = 1
 }
 if place_meeting((x + floor(hsp)), y, obj_null)

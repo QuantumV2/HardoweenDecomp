@@ -6,7 +6,7 @@ with (obj_player)
         global.panic = 0
         global.panicbg = 0
         image_speed = 0.35
-        x = (other.x + 30)
+        x = other.x + 30
         xscale = -1
         state = (4 << 0)
         image_index = 0

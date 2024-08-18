@@ -1,2 +1,2 @@
 x = other.x
-y = (other.y + 30)
+y = other.y + 30

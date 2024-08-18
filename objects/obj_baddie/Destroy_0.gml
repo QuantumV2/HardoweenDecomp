@@ -1,7 +1,7 @@
 if (ds_list_find_index(global.baddieroom, id) == -1 && important == 0)
 {
     var i = random_range(0, 100)
-    if (i >= 95 && global.screamsenabled)
+    if (i >= 95)
         scr_soundeffect(sfx_scream1, sfx_scream2, sfx_scream3, sfx_scream4, 44, 45, 46, 47, 48, 49)
     scr_soundeffect(sfx_killenemy)
     scr_sleep(50)
@@ -14,13 +14,13 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && important == 0)
     with (obj_camera)
     {
         shake_mag = 3
-        shake_mag_acc = (3 / room_speed)
+        shake_mag_acc = 3 / room_speed
     }
     with (instance_create(x, y, obj_sausageman_dead))
     {
         sprite_index = other.spr_dead
-        spr_palette = variable_instance_get(other.id, "spr_palette") != undefined ? other.spr_palette : spr_null
-        paletteselect = variable_instance_get(other.id, "paletteselect") != undefined ? other.paletteselect : 0
+        spr_palette = other.spr_palette
+        paletteselect = other.paletteselect
     }
     ds_list_add(global.baddieroom, id)
     obj_tv.image_index = random_range(0, 4)
@@ -66,7 +66,7 @@ else if (ds_list_find_index(global.baddieroom, id) == -1 && important == 1)
     with (obj_camera)
     {
         shake_mag = 3
-        shake_mag_acc = (3 / room_speed)
+        shake_mag_acc = 3 / room_speed
     }
     with (instance_create(x, y, obj_sausageman_dead))
     {
